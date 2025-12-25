@@ -1,11 +1,8 @@
-/* --- Global Smooth Scroll Settings --- */
-html {
-    scroll-behavior: smooth;
-    /* This ensures that when you scroll to a section, 
-       it doesn't get hidden behind your fixed navigation bar */
-    scroll-padding-top: 80px; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 :root {
     --primary: #c5a059; /* Gold */
     --bg-dark: #0f172a; /* Midnight Blue */
@@ -14,12 +11,12 @@ html {
     --text-dim: #94a3b8;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+    scroll-behavior: smooth;
+    /* This ensures that when you scroll to a section, 
+       it doesn't get hidden behind your fixed navigation bar */
+    scroll-padding-top: 80px; 
 }
-
 body {
     background-color: var(--bg-dark);
     color: var(--text-light);
@@ -197,3 +194,4 @@ footer a {
     header h1 { font-size: 2.5rem; }
     .nav-container { display: none; } 
 }
+
