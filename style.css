@@ -1,7 +1,8 @@
-/* --- Global Smooth Scroll Fix --- */
+/* --- Global Smooth Scroll Settings --- */
 html {
     scroll-behavior: smooth;
-    /* This ensures the fixed nav doesn't cover the section titles */
+    /* This ensures that when you scroll to a section, 
+       it doesn't get hidden behind your fixed navigation bar */
     scroll-padding-top: 80px; 
 }
 
@@ -24,7 +25,7 @@ body {
     color: var(--text-light);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    /* Remove scroll-behavior from here and keep it in html */
+    /* Removed scroll-behavior from here as it belongs in html */
 }
 
 /* Modern Navigation */
@@ -34,6 +35,7 @@ nav {
     width: 100%;
     background: rgba(15, 23, 42, 0.9);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
     border-bottom: 1px solid rgba(197, 160, 89, 0.2);
@@ -165,6 +167,7 @@ h1.section-title {
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+    z-index: 100;
 }
 
 /* Footer */
@@ -192,5 +195,5 @@ footer a {
 @media (max-width: 768px) {
     .image-group { grid-template-columns: 1fr; }
     header h1 { font-size: 2.5rem; }
-    .nav-container { display: none; }
+    .nav-container { display: none; } 
 }
